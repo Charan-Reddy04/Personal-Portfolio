@@ -1,36 +1,99 @@
-import { motion } from "framer-motion";
-import { BriefcaseBusiness, ArrowUpRight } from "lucide-react";
 
-const experiences = [
+import { motion } from "framer-motion";
+import { ExternalLink, Code2 } from "lucide-react";
+
+import {
+  FaGithub,
+  FaLinkedin,
+  FaHackerrank,
+} from "react-icons/fa";
+
+import {
+  SiLeetcode,
+  SiCodechef,
+  SiGeeksforgeeks,
+} from "react-icons/si";
+
+const profiles = [
   {
-    type: "Experience",
-    role: "Add Your Role / Position",
-    company: "Add Company / Organization",
-    period: "Add Duration",
+    name: "GitHub",
+    subtitle: "Development & Open Source",
     description:
-      "Add a short description of your responsibilities, contributions, and the skills you developed during this experience.",
-    skills: ["React", "JavaScript", "Node.js"],
+      "Explore my repositories, full-stack applications, and machine learning projects.",
+    url: "https://github.com/Charan-Reddy04",
+    icon: FaGithub,
+    label: "View GitHub",
+    color: "text-slate-900 dark:text-white",
   },
   {
-    type: "Project Experience",
-    role: "AI Campus Placement Operations & Interview Coordination Agent",
-    company: "Hackathon Project",
-    period: "Add Duration",
+    name: "LinkedIn",
+    subtitle: "Professional Network",
     description:
-      "Worked on a full-stack placement operations application involving student data, job eligibility, AI-based matching, interview coordination, notifications, and analytics.",
-    skills: ["React", "Node.js", "MongoDB", "AI/ML"],
+      "Connect with me to follow my learning journey, projects, and professional updates.",
+    url: "https://www.linkedin.com/in/charan571/",
+    icon: FaLinkedin,
+    label: "Connect on LinkedIn",
+    color: "text-[#0A66C2]",
+  },
+  {
+    name: "LeetCode",
+    subtitle: "Data Structures & Algorithms",
+    description:
+      "Visit my profile to explore my coding practice and problem-solving progress.",
+    url: "https://leetcode.com/u/VenkataCharan_0412/",
+    icon: SiLeetcode,
+    label: "View LeetCode",
+    color: "text-[#FFA116]",
+  },
+  {
+    name: "HackerRank",
+    subtitle: "Coding Practice & Skills",
+    description:
+      "Explore coding challenges, practice activities, and skill certifications.",
+    url: "https://www.hackerrank.com/",
+    icon: FaHackerrank,
+    label: "View HackerRank",
+    color: "text-[#2EC866]",
+  },
+  {
+    name: "CodeChef",
+    subtitle: "Competitive Programming",
+    description:
+      "Explore competitive programming challenges and improve coding skills.",
+    url: "https://www.codechef.com/",
+    icon: SiCodechef,
+    label: "View CodeChef",
+    color: "text-[#5B4638] dark:text-[#D9C2A7]",
+  },
+  {
+    name: "Take U Forward",
+    subtitle: "DSA & Interview Preparation",
+    description:
+      "Explore structured data structures and algorithms tutorials and interview preparation resources.",
+    url: "https://takeuforward.org/",
+    icon: Code2,
+    label: "Explore TUF",
+    color: "text-[#0057FF]",
+  },
+  {
+    name: "GeeksforGeeks",
+    subtitle: "Computer Science & DSA",
+    description:
+      "Learn computer science concepts, practice coding problems, and prepare for technical interviews.",
+    url: "https://www.geeksforgeeks.org/",
+    icon: SiGeeksforgeeks,
+    label: "Explore GeeksforGeeks",
+    color: "text-[#2F8D46]",
   },
 ];
 
 function Experience() {
   return (
     <section
-      id="experience"
-      className="bg-white py-24 dark:bg-[#050816]"
+      id="profiles"
+      className="scroll-mt-24 bg-[#F8F7F4] py-24 dark:bg-[#050816]"
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-
-        {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -39,87 +102,75 @@ function Experience() {
           className="max-w-3xl"
         >
           <p className="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-[#0057FF]">
-            Experience
+            Profiles & Resources
           </p>
 
           <h2 className="text-4xl font-black tracking-tight text-slate-950 dark:text-white sm:text-5xl">
-            Learning by{" "}
-            <span className="text-[#0057FF]">building.</span>
+            Find me <span className="text-[#0057FF]">online.</span>
           </h2>
 
-          <p className="mt-6 text-lg leading-8 text-slate-600 dark:text-slate-400">
-            Experiences that have helped me apply my technical knowledge,
-            solve practical problems, and grow as a developer.
+          <p className="mt-5 text-lg leading-8 text-slate-600 dark:text-slate-400">
+            Explore my coding profiles, development projects, professional
+            network, and favorite learning resources.
           </p>
         </motion.div>
 
-        {/* Experience Cards */}
-        <div className="mt-14 grid gap-6 lg:grid-cols-2">
-          {experiences.map((experience, index) => (
-            <motion.article
-              key={`${experience.role}-${index}`}
-              initial={{ opacity: 0, y: 25 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.15 }}
-              transition={{
-                duration: 0.5,
-                delay: index * 0.1,
-              }}
-              whileHover={{ y: -5 }}
-              className="group rounded-3xl border border-slate-200 bg-[#F8F7F4] p-7 transition-transform duration-300 dark:border-slate-800 dark:bg-[#0B1220]"
-            >
-              {/* Top */}
-              <div className="flex items-start justify-between gap-5">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white text-[#0057FF] dark:bg-slate-900">
-                  <BriefcaseBusiness size={22} strokeWidth={1.8} />
+        <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          {profiles.map((profile, index) => {
+            const Icon = profile.icon;
+
+            return (
+              <motion.article
+                key={profile.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.15 }}
+                transition={{
+                  duration: 0.45,
+                  delay: (index % 4) * 0.07,
+                }}
+                whileHover={{ y: -4 }}
+                className="group flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-colors duration-200 hover:border-[#0057FF]/40 hover:shadow-md dark:border-slate-800 dark:bg-[#0B1220] dark:hover:border-[#0057FF]/50"
+              >
+                <div className="flex items-center justify-between">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-800">
+  <Icon
+    size={27}
+    className={`${profile.color} opacity-100`}
+    style={{ strokeWidth: 2 }}
+  />
+</div>
+
+                  <ExternalLink
+                    size={17}
+                    className="text-slate-400 transition-colors group-hover:text-[#0057FF] dark:text-slate-500"
+                  />
                 </div>
 
-                <span className="rounded-full bg-blue-50 px-3 py-1.5 text-xs font-bold text-[#0057FF] dark:bg-blue-950/40 dark:text-[#3380FF]">
-                  {experience.type}
-                </span>
-              </div>
-
-              {/* Content */}
-              <div className="mt-7">
-                <p className="text-sm font-semibold text-[#0057FF]">
-                  {experience.company}
-                </p>
-
-                <h3 className="mt-2 text-2xl font-black text-slate-950 dark:text-white">
-                  {experience.role}
+                <h3 className="mt-6 text-xl font-black text-slate-950 dark:text-white">
+                  {profile.name}
                 </h3>
 
-                <p className="mt-2 text-sm font-medium text-slate-500 dark:text-slate-400">
-                  {experience.period}
+                <p className="mt-2 text-xs font-bold uppercase tracking-wide text-[#0057FF]">
+                  {profile.subtitle}
                 </p>
 
-                <p className="mt-5 text-sm leading-7 text-slate-600 dark:text-slate-400">
-                  {experience.description}
+                <p className="mt-4 flex-1 text-sm leading-6 text-slate-600 dark:text-slate-400">
+                  {profile.description}
                 </p>
-              </div>
 
-              {/* Skills */}
-              <div className="mt-6 flex flex-wrap gap-2">
-                {experience.skills.map((skill) => (
-                  <span
-                    key={skill}
-                    className="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-xs font-semibold text-slate-600 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-
-              {/* Small interaction */}
-              <div className="mt-7 flex items-center gap-2 text-sm font-bold text-slate-500 transition-colors duration-200 group-hover:text-[#0057FF] dark:text-slate-400 dark:group-hover:text-[#3380FF]">
-                Explore experience
-                <ArrowUpRight
-                  size={16}
-                  className="transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-                />
-              </div>
-            </motion.article>
-          ))}
+                <a
+                  href={profile.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-slate-800 transition-colors duration-200 hover:text-[#0057FF] dark:text-slate-200 dark:hover:text-[#3380FF]"
+                >
+                  {profile.label}
+                  <ExternalLink size={15} />
+                </a>
+              </motion.article>
+            );
+          })}
         </div>
       </div>
     </section>
