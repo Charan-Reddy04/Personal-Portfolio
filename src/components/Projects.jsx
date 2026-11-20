@@ -15,27 +15,23 @@ const projects = [
   },
   {
     number: "02",
-    title: "Credit Scoring Model",
-    category: "Machine Learning",
+    title: "SkillTrack",
+    category: "MERN Stack Web Application",
     description:
-      "A machine learning project focused on developing a credit scoring model and applying data-driven techniques to credit-related prediction.",
-    technologies: ["Python", "Pandas", "NumPy", "Scikit-learn"],
-    github:
-      "https://github.com/Charan-Reddy04/CodeAlpha-Task1-Credit-Scoring-Model",
-    demo:
-      "https://github.com/Charan-Reddy04/CodeAlpha-Task1-Credit-Scoring-Model",
+      "A comprehensive full-stack platform designed to help developers monitor their learning roadmap, track technical competencies, and manage skill progress.",
+    technologies: ["MongoDB", "Express", "React", "Node.js"],
+    github: "https://github.com/Charan-Reddy04/SkillTrack",
+    demo: "https://skill-track-eight-virid.vercel.app/",
   },
   {
     number: "03",
-    title: "Handwritten Character Recognition",
-    category: "Deep Learning",
+    title: "AI Placement Agent",
+    category: "AI & Full Stack Application",
     description:
-      "An AI project focused on recognizing handwritten characters using machine learning and deep learning techniques.",
-    technologies: ["Python", "Deep Learning", "Computer Vision"],
-    github:
-      "https://github.com/Charan-Reddy04/CodeAlpha_Task3_Handwritten_Character_Recognition",
-    demo:
-      "https://github.com/Charan-Reddy04/CodeAlpha_Task3_Handwritten_Character_Recognition",
+      "An intelligent placement coordination platform streamlining campus hiring operations, candidate assessment workflows, and interview management.",
+    technologies: ["React", "Node.js", "AI Integration", "MongoDB"],
+    github: "https://github.com/Charan-Reddy04/Ai-Placement-Agent",
+    demo: "https://ai-placement-agent-1.onrender.com/",
   },
 ];
 
@@ -43,7 +39,7 @@ function Projects() {
   return (
     <section
       id="projects"
-      className="bg-white py-24 dark:bg-[#050816]"
+      className="relative bg-[#F7F5FC] py-24 transition-colors duration-300 dark:bg-[#13101C]"
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
@@ -55,16 +51,16 @@ function Projects() {
           transition={{ duration: 0.6 }}
           className="max-w-3xl"
         >
-          <p className="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-[#0057FF]">
+          <p className="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-[#7957C8]">
             Projects
           </p>
 
-          <h2 className="text-4xl font-black tracking-tight text-slate-950 dark:text-white sm:text-5xl">
+          <h2 className="text-4xl font-black tracking-tight text-[#302A40] dark:text-white sm:text-5xl">
             Things I've{" "}
-            <span className="text-[#0057FF]">built.</span>
+            <span className="text-[#7957C8]">built.</span>
           </h2>
 
-          <p className="mt-6 text-lg leading-8 text-slate-600 dark:text-slate-400">
+          <p className="mt-6 text-lg leading-8 text-[#746C82] dark:text-[#A59EBA]">
             A selection of projects where I have explored full-stack
             development, machine learning, and AI-based applications.
           </p>
@@ -85,34 +81,34 @@ function Projects() {
               whileHover={{
                 y: -8,
               }}
-              className="group relative flex min-h-[470px] flex-col overflow-hidden rounded-3xl border border-slate-200 bg-[#F8F7F4] p-7 transition-all duration-300 hover:border-blue-200 hover:shadow-xl dark:border-slate-800 dark:bg-[#0B1220] dark:hover:border-blue-900"
+              className="clay-card group relative flex min-h-[470px] flex-col overflow-hidden rounded-[2.5rem] p-7 sm:p-8 transition-all duration-300 hover:border-[#7957C8]/40 hover:shadow-[0_24px_48px_-6px_rgba(121,87,200,0.18)]"
             >
               {/* Subtle Shine */}
-              <div className="pointer-events-none absolute -left-32 -top-20 h-40 w-40 rounded-full bg-white/60 blur-3xl opacity-0 transition-opacity duration-500 group-hover:opacity-100 dark:bg-blue-400/10" />
+              <div className="pointer-events-none absolute -left-32 -top-20 h-40 w-40 rounded-full bg-[#E9DFFF]/40 blur-3xl opacity-0 transition-opacity duration-500 group-hover:opacity-100 dark:bg-[#7957C8]/10" />
 
               {/* Top */}
               <div className="relative flex items-center justify-between">
-                <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-white text-sm font-bold text-[#0057FF] shadow-sm dark:bg-slate-900">
+                <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#E9DFFF] text-sm font-bold text-[#7957C8] shadow-[0_4px_10px_-2px_rgba(121,87,200,0.12),inset_0_2px_3px_rgba(255,255,255,0.95),inset_0_-2px_3px_rgba(121,87,200,0.1)] dark:bg-[#2C2442] dark:text-[#C4B5FD]">
                   {project.number}
                 </span>
 
                 <ArrowUpRight
                   size={21}
-                  className="text-slate-400 transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-[#0057FF]"
+                  className="text-[#746C82] transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-[#7957C8] dark:text-[#A59EBA] dark:group-hover:text-[#C4B5FD]"
                 />
               </div>
 
               {/* Project Content */}
               <div className="relative mt-8 flex-1">
-                <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#0057FF]">
+                <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#7957C8]">
                   {project.category}
                 </p>
 
-                <h3 className="mt-3 text-2xl font-black leading-tight text-slate-950 dark:text-white">
+                <h3 className="mt-3 text-2xl font-black leading-tight text-[#302A40] dark:text-white">
                   {project.title}
                 </h3>
 
-                <p className="mt-5 text-sm leading-7 text-slate-600 dark:text-slate-400">
+                <p className="mt-5 text-sm leading-7 text-[#746C82] dark:text-[#A59EBA]">
                   {project.description}
                 </p>
 
@@ -121,7 +117,7 @@ function Projects() {
                   {project.technologies.map((technology) => (
                     <span
                       key={technology}
-                      className="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-xs font-semibold text-slate-600 transition-colors duration-200 group-hover:border-blue-100 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300 dark:group-hover:border-blue-900"
+                      className="rounded-xl border border-[#E9DFFF]/80 bg-[#F7F5FC] px-3 py-1.5 text-xs font-semibold text-[#746C82] shadow-[0_1px_3px_rgba(48,42,64,0.03),inset_0_1px_2px_rgba(255,255,255,0.9)] transition-colors duration-200 group-hover:border-[#7957C8]/30 dark:border-[#2C2442] dark:bg-[#161320] dark:text-[#A59EBA]"
                     >
                       {technology}
                     </span>
@@ -135,7 +131,7 @@ function Projects() {
                   href={project.github}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm font-bold text-slate-800 transition-all duration-300 hover:-translate-y-0.5 hover:border-slate-300 hover:shadow-md dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 dark:hover:border-slate-600"
+                  className="clay-button-secondary inline-flex items-center justify-center gap-2 rounded-2xl px-4 py-3 text-sm font-bold"
                 >
                   <FaGithub size={17} />
                   GitHub
@@ -145,7 +141,7 @@ function Projects() {
                   href={project.demo}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#0057FF] px-4 py-3 text-sm font-bold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#0046CC] hover:shadow-lg"
+                  className="clay-button-primary inline-flex items-center justify-center gap-2 rounded-2xl px-4 py-3 text-sm font-bold text-white"
                 >
                   <ExternalLink size={16} />
                   Live Demo
@@ -167,7 +163,7 @@ function Projects() {
             href="https://github.com/Charan-Reddy04"
             target="_blank"
             rel="noreferrer"
-            className="group inline-flex items-center gap-2 text-sm font-bold text-slate-700 transition-colors hover:text-[#0057FF] dark:text-slate-300 dark:hover:text-[#3380FF]"
+            className="group inline-flex items-center gap-2 text-sm font-bold text-[#746C82] transition-colors hover:text-[#7957C8] dark:text-[#A59EBA] dark:hover:text-[#C4B5FD]"
           >
             View more on GitHub
             <ArrowUpRight
