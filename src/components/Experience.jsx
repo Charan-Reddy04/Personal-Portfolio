@@ -22,7 +22,8 @@ const profiles = [
     url: "https://github.com/Charan-Reddy04",
     icon: FaGithub,
     label: "View GitHub",
-    color: "text-[#302A40] dark:text-white",
+    iconBg: "bg-[#E9DFFF]",
+    iconColor: "text-[#7957C8]",
   },
   {
     name: "LinkedIn",
@@ -32,7 +33,8 @@ const profiles = [
     url: "https://www.linkedin.com/in/charan571/",
     icon: FaLinkedin,
     label: "Connect on LinkedIn",
-    color: "text-[#0A66C2]",
+    iconBg: "bg-[#DCEEFF]",
+    iconColor: "text-[#7957C8]",
   },
   {
     name: "LeetCode",
@@ -42,7 +44,8 @@ const profiles = [
     url: "https://leetcode.com/u/VenkataCharan_0412/",
     icon: SiLeetcode,
     label: "View LeetCode",
-    color: "text-[#FFA116]",
+    iconBg: "bg-[#FFE5D5]",
+    iconColor: "text-[#302A40]",
   },
   {
     name: "HackerRank",
@@ -52,7 +55,8 @@ const profiles = [
     url: "https://www.hackerrank.com/",
     icon: FaHackerrank,
     label: "View HackerRank",
-    color: "text-[#2EC866]",
+    iconBg: "bg-[#DDF5E8]",
+    iconColor: "text-[#302A40]",
   },
   {
     name: "CodeChef",
@@ -62,7 +66,8 @@ const profiles = [
     url: "https://www.codechef.com/",
     icon: SiCodechef,
     label: "View CodeChef",
-    color: "text-[#5B4638] dark:text-[#D9C2A7]",
+    iconBg: "bg-[#FFE5D5]",
+    iconColor: "text-[#7957C8]",
   },
   {
     name: "Take U Forward",
@@ -72,7 +77,8 @@ const profiles = [
     url: "https://takeuforward.org/",
     icon: Code2,
     label: "Explore TUF",
-    color: "text-[#7957C8]",
+    iconBg: "bg-[#E9DFFF]",
+    iconColor: "text-[#7957C8]",
   },
   {
     name: "GeeksforGeeks",
@@ -82,7 +88,8 @@ const profiles = [
     url: "https://www.geeksforgeeks.org/",
     icon: SiGeeksforgeeks,
     label: "Explore GeeksforGeeks",
-    color: "text-[#2F8D46]",
+    iconBg: "bg-[#DDF5E8]",
+    iconColor: "text-[#302A40]",
   },
 ];
 
@@ -129,20 +136,20 @@ function Experience() {
                   delay: (index % 4) * 0.07,
                 }}
                 whileHover={{ y: -5 }}
-                className="clay-card group flex flex-col rounded-[2.25rem] p-6 transition-all duration-300 hover:border-[#7957C8]/40 hover:shadow-[0_20px_40px_-6px_rgba(121,87,200,0.15)]"
+                className="clay-card group flex flex-col rounded-[28px] p-6 transition-all duration-300 hover:border-[#7957C8]/40 hover:shadow-[8px_14px_28px_-4px_rgba(121,87,200,0.16)]"
               >
                 <div className="flex items-center justify-between">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-[#E9DFFF]/80 bg-[#F7F5FC] shadow-[0_4px_10px_-2px_rgba(48,42,64,0.04),inset_0_2px_3px_rgba(255,255,255,0.95),inset_0_-2px_3px_rgba(121,87,200,0.06)] dark:border-[#2C2442] dark:bg-[#161320]">
+                  <div className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-white/70 ${profile.iconBg} shadow-[3px_4px_10px_rgba(48,42,64,0.06),inset_2px_2px_3px_rgba(255,255,255,0.95),inset_-2px_-2px_3px_rgba(121,87,200,0.08)]`}>
                     <Icon
-                      size={26}
-                      className={`${profile.color} opacity-100`}
+                      size={25}
+                      className={`${profile.iconColor}`}
                       style={{ strokeWidth: 2 }}
                     />
                   </div>
 
                   <ExternalLink
                     size={17}
-                    className="text-[#746C82] transition-colors group-hover:text-[#7957C8] dark:text-[#A59EBA] dark:group-hover:text-[#C4B5FD]"
+                    className="text-[#746C82] transition-colors group-hover:text-[#7957C8] dark:text-[#A59EBA]"
                   />
                 </div>
 
@@ -150,7 +157,7 @@ function Experience() {
                   {profile.name}
                 </h3>
 
-                <p className="mt-2 text-xs font-bold uppercase tracking-wide text-[#7957C8] dark:text-[#C4B5FD]">
+                <p className="mt-2 text-xs font-bold uppercase tracking-wide text-[#7957C8]">
                   {profile.subtitle}
                 </p>
 
@@ -162,7 +169,7 @@ function Experience() {
                   href={profile.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-[#302A40] transition-colors duration-200 hover:text-[#7957C8] dark:text-[#F4F1FA] dark:hover:text-[#C4B5FD]"
+                  className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-[#302A40] transition-colors duration-200 hover:text-[#7957C8] dark:text-[#F4F1FA]"
                 >
                   {profile.label}
                   <ExternalLink size={15} />

@@ -12,6 +12,8 @@ const projects = [
     technologies: ["React", "Node.js", "Express", "MongoDB"],
     github: "https://github.com/Charan-Reddy04/foodrush",
     demo: "https://foodrush-07.onrender.com",
+    badgeBg: "bg-[#E9DFFF]",
+    badgeText: "text-[#7957C8]",
   },
   {
     number: "02",
@@ -22,6 +24,8 @@ const projects = [
     technologies: ["MongoDB", "Express", "React", "Node.js"],
     github: "https://github.com/Charan-Reddy04/SkillTrack",
     demo: "https://skill-track-eight-virid.vercel.app/",
+    badgeBg: "bg-[#DCEEFF]",
+    badgeText: "text-[#7957C8]",
   },
   {
     number: "03",
@@ -32,6 +36,8 @@ const projects = [
     technologies: ["React", "Node.js", "AI Integration", "MongoDB"],
     github: "https://github.com/Charan-Reddy04/Ai-Placement-Agent",
     demo: "https://ai-placement-agent-1.onrender.com/",
+    badgeBg: "bg-[#DDF5E8]",
+    badgeText: "text-[#302A40]",
   },
 ];
 
@@ -81,20 +87,20 @@ function Projects() {
               whileHover={{
                 y: -8,
               }}
-              className="clay-card group relative flex min-h-[470px] flex-col overflow-hidden rounded-[2.5rem] p-7 sm:p-8 transition-all duration-300 hover:border-[#7957C8]/40 hover:shadow-[0_24px_48px_-6px_rgba(121,87,200,0.18)]"
+              className="clay-card group relative flex min-h-[470px] flex-col overflow-hidden rounded-[28px] p-7 sm:p-8 transition-all duration-300 hover:border-[#7957C8]/40 hover:shadow-[8px_16px_32px_-4px_rgba(121,87,200,0.18)]"
             >
-              {/* Subtle Shine */}
-              <div className="pointer-events-none absolute -left-32 -top-20 h-40 w-40 rounded-full bg-[#E9DFFF]/40 blur-3xl opacity-0 transition-opacity duration-500 group-hover:opacity-100 dark:bg-[#7957C8]/10" />
+              {/* Subtle Pastel Glow */}
+              <div className="pointer-events-none absolute -left-32 -top-20 h-40 w-40 rounded-full bg-[#E9DFFF]/40 blur-3xl opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
               {/* Top */}
               <div className="relative flex items-center justify-between">
-                <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#E9DFFF] text-sm font-bold text-[#7957C8] shadow-[0_4px_10px_-2px_rgba(121,87,200,0.12),inset_0_2px_3px_rgba(255,255,255,0.95),inset_0_-2px_3px_rgba(121,87,200,0.1)] dark:bg-[#2C2442] dark:text-[#C4B5FD]">
+                <span className={`flex h-12 w-12 items-center justify-center rounded-2xl ${project.badgeBg} ${project.badgeText} text-sm font-bold shadow-[3px_4px_10px_rgba(121,87,200,0.12),inset_2px_2px_3px_rgba(255,255,255,0.95),inset_-2px_-2px_3px_rgba(121,87,200,0.08)]`}>
                   {project.number}
                 </span>
 
                 <ArrowUpRight
                   size={21}
-                  className="text-[#746C82] transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-[#7957C8] dark:text-[#A59EBA] dark:group-hover:text-[#C4B5FD]"
+                  className="text-[#746C82] transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-[#7957C8]"
                 />
               </div>
 
@@ -117,7 +123,7 @@ function Projects() {
                   {project.technologies.map((technology) => (
                     <span
                       key={technology}
-                      className="rounded-xl border border-[#E9DFFF]/80 bg-[#F7F5FC] px-3 py-1.5 text-xs font-semibold text-[#746C82] shadow-[0_1px_3px_rgba(48,42,64,0.03),inset_0_1px_2px_rgba(255,255,255,0.9)] transition-colors duration-200 group-hover:border-[#7957C8]/30 dark:border-[#2C2442] dark:bg-[#161320] dark:text-[#A59EBA]"
+                      className="rounded-xl border border-[#E9DFFF] bg-[#F7F5FC] px-3 py-1.5 text-xs font-semibold text-[#746C82] shadow-[1px_2px_4px_rgba(48,42,64,0.03),inset_1px_1px_2px_rgba(255,255,255,0.9)] transition-colors duration-200 group-hover:border-[#7957C8]/40 group-hover:bg-[#E9DFFF]/40 group-hover:text-[#7957C8]"
                     >
                       {technology}
                     </span>
@@ -141,7 +147,7 @@ function Projects() {
                   href={project.demo}
                   target="_blank"
                   rel="noreferrer"
-                  className="clay-button-primary inline-flex items-center justify-center gap-2 rounded-2xl px-4 py-3 text-sm font-bold text-white"
+                  className="clay-button-primary inline-flex items-center justify-center gap-2 rounded-2xl px-4 py-3 text-sm font-bold"
                 >
                   <ExternalLink size={16} />
                   Live Demo
@@ -163,7 +169,7 @@ function Projects() {
             href="https://github.com/Charan-Reddy04"
             target="_blank"
             rel="noreferrer"
-            className="group inline-flex items-center gap-2 text-sm font-bold text-[#746C82] transition-colors hover:text-[#7957C8] dark:text-[#A59EBA] dark:hover:text-[#C4B5FD]"
+            className="group inline-flex items-center gap-2 text-sm font-bold text-[#746C82] transition-colors hover:text-[#7957C8]"
           >
             View more on GitHub
             <ArrowUpRight

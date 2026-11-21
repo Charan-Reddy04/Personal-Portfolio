@@ -85,7 +85,7 @@ function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.15 }}
           transition={{ duration: 0.6 }}
-          className="clay-card mt-14 rounded-[2.75rem] p-7 sm:p-9 lg:p-12"
+          className="clay-card mt-14 rounded-[28px] p-7 sm:p-9 lg:p-12"
         >
           <div className="grid lg:grid-cols-2">
 
@@ -93,7 +93,7 @@ function Contact() {
             <div className="flex flex-col justify-center lg:pr-12">
 
               <div>
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#E9DFFF] text-[#7957C8] shadow-[0_4px_10px_-2px_rgba(121,87,200,0.15),inset_0_2px_3px_rgba(255,255,255,0.95),inset_0_-2px_3px_rgba(121,87,200,0.12)] dark:bg-[#2C2442] dark:text-[#C4B5FD]">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#E9DFFF] text-[#7957C8] shadow-[3px_4px_10px_rgba(121,87,200,0.15),inset_2px_2px_3px_rgba(255,255,255,0.95),inset_-2px_-2px_3px_rgba(121,87,200,0.12)]">
                   <Mail size={22} />
                 </div>
 
@@ -114,28 +114,28 @@ function Contact() {
                   href="mailto:singamcherry571@gmail.com"
                   className="group flex items-center gap-4"
                 >
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl border border-[#E9DFFF]/80 bg-[#F7F5FC] text-[#7957C8] shadow-[0_2px_6px_rgba(48,42,64,0.03),inset_0_1.5px_2px_rgba(255,255,255,0.95),inset_0_-1.5px_2px_rgba(121,87,200,0.04)] dark:border-[#2C2442] dark:bg-[#161320] dark:text-[#C4B5FD]">
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-[#DCEEFF] text-[#7957C8] shadow-[2px_3px_6px_rgba(48,42,64,0.03),inset_1.5px_1.5px_2px_rgba(255,255,255,0.95),inset_-1.5px_-1.5px_2px_rgba(121,87,200,0.04)]">
                     <Mail size={18} />
                   </div>
 
                   <div>
-                    <p className="text-xs font-bold uppercase tracking-wide text-[#746C82]/70 dark:text-[#A59EBA]/70">
+                    <p className="text-xs font-bold uppercase tracking-wide text-[#746C82]">
                       Email
                     </p>
 
-                    <p className="mt-1 text-sm font-semibold text-[#302A40] transition-colors duration-200 group-hover:text-[#7957C8] dark:text-[#F4F1FA] dark:group-hover:text-[#C4B5FD]">
+                    <p className="mt-1 text-sm font-semibold text-[#302A40] transition-colors duration-200 group-hover:text-[#7957C8] dark:text-[#F4F1FA]">
                       singamcherry571@gmail.com
                     </p>
                   </div>
                 </a>
 
                 <div className="flex items-center gap-4">
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl border border-[#E9DFFF]/80 bg-[#F7F5FC] text-[#7957C8] shadow-[0_2px_6px_rgba(48,42,64,0.03),inset_0_1.5px_2px_rgba(255,255,255,0.95),inset_0_-1.5px_2px_rgba(121,87,200,0.04)] dark:border-[#2C2442] dark:bg-[#161320] dark:text-[#C4B5FD]">
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-[#DDF5E8] text-[#302A40] shadow-[2px_3px_6px_rgba(48,42,64,0.03),inset_1.5px_1.5px_2px_rgba(255,255,255,0.95),inset_-1.5px_-1.5px_2px_rgba(121,87,200,0.04)]">
                     <MapPin size={18} />
                   </div>
 
                   <div>
-                    <p className="text-xs font-bold uppercase tracking-wide text-[#746C82]/70 dark:text-[#A59EBA]/70">
+                    <p className="text-xs font-bold uppercase tracking-wide text-[#746C82]">
                       Location
                     </p>
 
@@ -155,7 +155,7 @@ function Contact() {
                   target="_blank"
                   rel="noreferrer"
                   aria-label="GitHub"
-                  className="clay-button-secondary flex h-11 w-11 items-center justify-center rounded-2xl text-[#746C82] dark:text-[#A59EBA]"
+                  className="clay-button-secondary flex h-11 w-11 items-center justify-center rounded-2xl"
                 >
                   <FaGithub size={19} />
                 </a>
@@ -165,14 +165,14 @@ function Contact() {
                   target="_blank"
                   rel="noreferrer"
                   aria-label="LinkedIn"
-                  className="clay-button-secondary flex h-11 w-11 items-center justify-center rounded-2xl text-[#746C82] dark:text-[#A59EBA]"
+                  className="clay-button-secondary flex h-11 w-11 items-center justify-center rounded-2xl"
                 >
                   <FaLinkedin size={19} />
                 </a>
 
                 <a
                   href="mailto:singamcherry571@gmail.com"
-                  className="ml-1 inline-flex items-center gap-2 text-sm font-bold text-[#7957C8] transition-colors duration-200 hover:text-[#6744B5] dark:text-[#C4B5FD] dark:hover:text-white"
+                  className="ml-1 inline-flex items-center gap-2 text-sm font-bold text-[#7957C8] transition-colors duration-200 hover:text-[#6744B5]"
                 >
                   Let's connect
                   <ArrowUpRight size={16} />
@@ -182,7 +182,7 @@ function Contact() {
             </div>
 
             {/* RIGHT SIDE */}
-            <div className="mt-10 border-t border-[#E9DFFF]/80 pt-10 dark:border-[#2C2442] lg:mt-0 lg:border-l lg:border-t-0 lg:pl-12 lg:pt-0">
+            <div className="mt-10 border-t border-[#E9DFFF] pt-10 dark:border-[#2C2442] lg:mt-0 lg:border-l lg:border-t-0 lg:pl-12 lg:pt-0">
 
               <form
                 ref={formRef}
@@ -250,7 +250,7 @@ function Contact() {
                 <button
                   type="submit"
                   disabled={status === "sending"}
-                  className="clay-button-primary mt-6 inline-flex items-center justify-center gap-2 rounded-2xl px-7 py-3.5 text-sm font-bold text-white disabled:cursor-not-allowed disabled:opacity-70"
+                  className="clay-button-primary mt-6 inline-flex items-center justify-center gap-2 rounded-2xl px-7 py-3.5 text-sm font-bold disabled:cursor-not-allowed disabled:opacity-70"
                 >
                   {status === "sending" ? "Sending..." : "Send Message"}
 
@@ -259,14 +259,14 @@ function Contact() {
 
                 {/* Success Message */}
                 {status === "success" && (
-                  <p className="mt-4 text-sm font-semibold text-emerald-600 dark:text-emerald-400">
+                  <p className="mt-4 rounded-xl border border-[#DDF5E8] bg-[#DDF5E8] px-4 py-2 text-sm font-semibold text-[#302A40]">
                     Message sent successfully! I'll get back to you soon.
                   </p>
                 )}
 
                 {/* Error Message */}
                 {status === "error" && (
-                  <p className="mt-4 text-sm font-semibold text-rose-600 dark:text-rose-400">
+                  <p className="mt-4 rounded-xl border border-[#FFE5D5] bg-[#FFE5D5] px-4 py-2 text-sm font-semibold text-[#302A40]">
                     Something went wrong. Please try again.
                   </p>
                 )}

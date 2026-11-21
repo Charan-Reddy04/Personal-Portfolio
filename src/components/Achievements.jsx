@@ -6,11 +6,15 @@ const achievements = [
     title: "Hackathon Project",
     description:
       "Built an AI-powered campus placement operations and interview coordination application.",
+    iconBg: "bg-[#FFE5D5]",
+    iconColor: "text-[#302A40]",
   },
   {
     title: "Machine Learning Projects",
     description:
       "Developed machine learning projects involving credit scoring and recommendation systems.",
+    iconBg: "bg-[#DDF5E8]",
+    iconColor: "text-[#302A40]",
   },
 ];
 
@@ -55,9 +59,9 @@ function Achievements() {
                 delay: index * 0.1,
               }}
               whileHover={{ y: -6 }}
-              className="clay-card group rounded-[2.5rem] p-8 transition-all duration-300 hover:border-[#7957C8]/40 hover:shadow-[0_24px_48px_-6px_rgba(121,87,200,0.16)]"
+              className="clay-card group rounded-[28px] p-8 transition-all duration-300 hover:border-[#7957C8]/40 hover:shadow-[8px_14px_28px_-4px_rgba(121,87,200,0.16)]"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#FFE5D5] text-[#C46830] shadow-[0_4px_10px_-2px_rgba(196,104,48,0.15),inset_0_2px_3px_rgba(255,255,255,0.95),inset_0_-2px_3px_rgba(196,104,48,0.12)] dark:bg-[#3D2517] dark:text-[#FFB58A]">
+              <div className={`flex h-12 w-12 items-center justify-center rounded-2xl ${item.iconBg} ${item.iconColor} shadow-[3px_4px_10px_rgba(48,42,64,0.06),inset_2px_2px_3px_rgba(255,255,255,0.95),inset_-2px_-2px_3px_rgba(121,87,200,0.08)]`}>
                 <Trophy size={22} />
               </div>
 
@@ -69,7 +73,7 @@ function Achievements() {
                 {item.description}
               </p>
 
-              <div className="mt-6 flex items-center gap-2 text-sm font-semibold text-[#7957C8] dark:text-[#C4B5FD]">
+              <div className="mt-6 flex items-center gap-2 text-sm font-semibold text-[#7957C8]">
                 <BadgeCheck size={17} />
                 Achievement
               </div>

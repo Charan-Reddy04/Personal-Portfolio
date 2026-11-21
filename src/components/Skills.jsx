@@ -13,11 +13,15 @@ const skillCategories = [
   {
     title: "Programming Languages",
     icon: Code2,
+    iconBg: "bg-[#E9DFFF]",
+    iconColor: "text-[#7957C8]",
     skills: ["C", "Python", "JavaScript", "SQL"],
   },
   {
     title: "Frontend Development",
     icon: Monitor,
+    iconBg: "bg-[#DCEEFF]",
+    iconColor: "text-[#7957C8]",
     skills: [
       "HTML5",
       "CSS3",
@@ -29,11 +33,15 @@ const skillCategories = [
   {
     title: "Backend Development",
     icon: Server,
+    iconBg: "bg-[#DDF5E8]",
+    iconColor: "text-[#302A40]",
     skills: ["Node.js", "Express.js", "REST APIs", "JWT"],
   },
   {
     title: "AI / Machine Learning",
     icon: Brain,
+    iconBg: "bg-[#FFE5D5]",
+    iconColor: "text-[#302A40]",
     skills: [
       "Machine Learning",
       "Recommendation Systems",
@@ -47,16 +55,22 @@ const skillCategories = [
   {
     title: "Databases",
     icon: Database,
+    iconBg: "bg-[#E9DFFF]",
+    iconColor: "text-[#7957C8]",
     skills: ["MySQL", "MongoDB"],
   },
   {
     title: "Development & DevOps Tools",
     icon: Wrench,
+    iconBg: "bg-[#DCEEFF]",
+    iconColor: "text-[#7957C8]",
     skills: ["Git", "GitHub", "VS Code", "Postman", "npm"],
   },
   {
     title: "Core Computer Science",
     icon: Cpu,
+    iconBg: "bg-[#DDF5E8]",
+    iconColor: "text-[#302A40]",
     skills: ["DSA", "DBMS", "Operating Systems", "Computer Networks", "OOP"],
   },
 ];
@@ -109,11 +123,11 @@ function Skills() {
                   delay: index * 0.07,
                 }}
                 whileHover={{ y: -5 }}
-                className="clay-card group rounded-[2.25rem] p-7 transition-all duration-300 hover:border-[#7957C8]/40 hover:shadow-[0_22px_44px_-6px_rgba(121,87,200,0.15)]"
+                className="clay-card group rounded-[28px] p-7 transition-all duration-300 hover:border-[#7957C8]/40 hover:shadow-[8px_14px_28px_-4px_rgba(121,87,200,0.16)]"
               >
                 {/* Category Header */}
                 <div className="flex items-center gap-4">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#E9DFFF] text-[#7957C8] shadow-[0_4px_10px_-2px_rgba(121,87,200,0.15),inset_0_2px_3px_rgba(255,255,255,0.95),inset_0_-2px_3px_rgba(121,87,200,0.12)] transition-transform duration-300 group-hover:scale-105 dark:bg-[#2C2442] dark:text-[#C4B5FD]">
+                  <div className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl ${category.iconBg} ${category.iconColor} shadow-[3px_4px_10px_rgba(48,42,64,0.06),inset_2px_2px_3px_rgba(255,255,255,0.95),inset_-2px_-2px_3px_rgba(121,87,200,0.08)] transition-transform duration-300 group-hover:scale-105`}>
                     <Icon size={22} strokeWidth={1.8} />
                   </div>
 
@@ -127,7 +141,7 @@ function Skills() {
                   {category.skills.map((skill) => (
                     <span
                       key={skill}
-                      className="rounded-xl border border-[#E9DFFF]/80 bg-[#F7F5FC] px-3.5 py-1.5 text-sm font-medium text-[#302A40] shadow-[0_2px_6px_rgba(48,42,64,0.03),inset_0_1.5px_2px_rgba(255,255,255,0.95),inset_0_-1.5px_2px_rgba(121,87,200,0.04)] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#7957C8]/40 hover:bg-[#E9DFFF]/40 hover:text-[#7957C8] dark:border-[#2C2442] dark:bg-[#161320] dark:text-[#F4F1FA] dark:hover:text-[#C4B5FD]"
+                      className="rounded-xl border border-[#E9DFFF] bg-[#F7F5FC] px-3.5 py-1.5 text-sm font-medium text-[#302A40] shadow-[2px_2px_6px_rgba(48,42,64,0.03),inset_1.5px_1.5px_2px_rgba(255,255,255,0.95),inset_-1.5px_-1.5px_2px_rgba(121,87,200,0.04)] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#7957C8] hover:bg-[#E9DFFF] hover:text-[#7957C8] dark:border-[#2C2442] dark:bg-[#161320] dark:text-[#F4F1FA]"
                     >
                       {skill}
                     </span>
