@@ -14,9 +14,6 @@ const education = [
     details: "3rd Year  · 5th Semester",
     score: "CGPA: 8.23 / 10",
     status: "Currently Studying",
-    iconBg: "bg-[#E9DFFF]",
-    levelBg: "bg-[#E9DFFF]",
-    statusBg: "bg-[#E9DFFF] text-[#7957C8] border-[#7957C8]/25",
   },
   {
     icon: School,
@@ -25,9 +22,6 @@ const education = [
     institution: "Sri Chaitanya Junior College, B. Thandrapadu, Kurnool",
     details: "960 / 1000 · 96%",
     status: "Completed",
-    iconBg: "bg-[#DCEEFF]",
-    levelBg: "bg-[#DCEEFF]",
-    statusBg: "bg-[#DDF5E8] text-[#302A40] border-[#DDF5E8]",
   },
   {
     icon: BookOpen,
@@ -36,9 +30,6 @@ const education = [
     institution: "Good Shepherd EM High School, Nandyal",
     details: "550 / 600 · 91.67%",
     status: "Completed",
-    iconBg: "bg-[#FFE5D5]",
-    levelBg: "bg-[#FFE5D5]",
-    statusBg: "bg-[#DDF5E8] text-[#302A40] border-[#DDF5E8]",
   },
 ];
 
@@ -89,15 +80,15 @@ function Education() {
                   delay: index * 0.1,
                 }}
                 whileHover={{ y: -6 }}
-                className="clay-card flex min-h-[300px] flex-col rounded-[28px] p-7 sm:p-8 transition-all duration-300 hover:border-[#7957C8]/40 hover:shadow-[8px_14px_28px_-4px_rgba(121,87,200,0.16)]"
+                className="clay-card flex min-h-[300px] flex-col rounded-[2.5rem] p-7 sm:p-8 transition-all duration-300 hover:border-[#7957C8]/40 hover:shadow-[0_22px_44px_-6px_rgba(121,87,200,0.15)]"
               >
                 {/* Icon + Level */}
                 <div className="flex items-center justify-between">
-                  <div className={`flex h-12 w-12 items-center justify-center rounded-2xl ${item.iconBg} text-[#7957C8] shadow-[3px_4px_10px_rgba(48,42,64,0.06),inset_2px_2px_3px_rgba(255,255,255,0.95),inset_-2px_-2px_3px_rgba(121,87,200,0.08)]`}>
+                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#E9DFFF] text-[#7957C8] shadow-[0_4px_10px_-2px_rgba(121,87,200,0.15),inset_0_2px_3px_rgba(255,255,255,0.95),inset_0_-2px_3px_rgba(121,87,200,0.12)] dark:bg-[#2C2442] dark:text-[#C4B5FD]">
                     <Icon size={23} strokeWidth={1.8} />
                   </div>
 
-                  <span className={`rounded-full border border-white/60 ${item.levelBg} px-3.5 py-1 text-xs font-bold text-[#302A40] shadow-[inset_1px_1px_2px_rgba(255,255,255,0.9)]`}>
+                  <span className="rounded-full border border-[#E9DFFF]/80 bg-[#F7F5FC] px-3.5 py-1 text-xs font-bold text-[#746C82] shadow-[inset_0_1px_2px_rgba(255,255,255,0.9)] dark:border-[#2C2442] dark:bg-[#161320] dark:text-[#A59EBA]">
                     {item.level}
                   </span>
                 </div>
@@ -108,7 +99,7 @@ function Education() {
                     {item.title}
                   </h3>
 
-                  <p className="mt-3 text-sm font-semibold leading-6 text-[#7957C8]">
+                  <p className="mt-3 text-sm font-semibold leading-6 text-[#7957C8] dark:text-[#C4B5FD]">
                     {item.institution}
                   </p>
 
@@ -124,7 +115,11 @@ function Education() {
 
                   <div className="mt-auto pt-6">
                     <span
-                      className={`inline-flex rounded-full border px-3.5 py-1.5 text-xs font-bold shadow-[2px_3px_6px_rgba(48,42,64,0.06),inset_1.5px_1.5px_2px_rgba(255,255,255,0.85)] ${item.statusBg}`}
+                      className={`inline-flex rounded-full px-3.5 py-1.5 text-xs font-bold ${
+                        item.status === "Currently Studying"
+                          ? "border border-[#7957C8]/25 bg-[#E9DFFF] text-[#7957C8] shadow-[0_2px_6px_rgba(121,87,200,0.12),inset_0_1.5px_2px_rgba(255,255,255,0.85)] dark:bg-[#2C2442] dark:text-[#C4B5FD]"
+                          : "border border-[#A7E7C4] bg-[#DDF5E8] text-[#1E7449] shadow-[0_2px_6px_rgba(30,116,73,0.1),inset_0_1.5px_2px_rgba(255,255,255,0.85)] dark:border-[#235237] dark:bg-[#173022] dark:text-[#6EE7B7]"
+                      }`}
                     >
                       {item.status}
                     </span>

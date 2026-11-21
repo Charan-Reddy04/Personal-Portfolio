@@ -20,21 +20,21 @@ const workItems = [
     title: "Backend",
     text: "Node.js · Express.js · REST APIs",
     bgColor: "bg-[#DCEEFF]",
-    iconColor: "text-[#7957C8]",
+    iconColor: "text-[#3B82F6]",
   },
   {
     icon: Brain,
     title: "AI / ML",
     text: "Python · Scikit-learn · Data Analysis",
     bgColor: "bg-[#DDF5E8]",
-    iconColor: "text-[#302A40]",
+    iconColor: "text-[#10B981]",
   },
   {
     icon: GitBranch,
     title: "Development",
     text: "Git · GitHub · VS Code",
     bgColor: "bg-[#FFE5D5]",
-    iconColor: "text-[#302A40]",
+    iconColor: "text-[#F97316]",
   },
 ];
 
@@ -79,14 +79,14 @@ function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.15 }}
           transition={{ duration: 0.7, delay: 0.1 }}
-          className="clay-card mt-14 rounded-[28px] p-8 sm:p-10"
+          className="clay-card mt-14 rounded-[2.5rem] p-8 sm:p-10"
         >
           <div className="grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
 
             {/* A Little About My Journey */}
             <div>
               <div className="flex items-center gap-3">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#E9DFFF] text-[#7957C8] shadow-[3px_4px_10px_rgba(121,87,200,0.15),inset_2px_2px_3px_rgba(255,255,255,0.9),inset_-2px_-2px_3px_rgba(121,87,200,0.12)] dark:bg-[#2C2442] dark:text-[#E9DFFF]">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#E9DFFF] text-[#7957C8] shadow-[0_4px_10px_-2px_rgba(121,87,200,0.15),inset_0_2px_3px_rgba(255,255,255,0.9),inset_0_-2px_3px_rgba(121,87,200,0.12)] dark:bg-[#2C2442] dark:text-[#C4B5FD]">
                   <Sparkles size={22} />
                 </div>
 
@@ -146,11 +146,11 @@ function About() {
                         delay: index * 0.08,
                       }}
                       whileHover={{ y: -3 }}
-                      className="group rounded-2xl border border-[#E9DFFF] bg-[#FFFFFF] p-4 shadow-[4px_6px_14px_-2px_rgba(48,42,64,0.06),inset_2px_2px_3px_rgba(255,255,255,0.95),inset_-2px_-2px_3px_rgba(121,87,200,0.05)] transition-all duration-300 hover:border-[#7957C8]/40 hover:shadow-[6px_10px_20px_-2px_rgba(121,87,200,0.12)] dark:border-[#2C2442] dark:bg-[#161320]"
+                      className="group rounded-2xl border border-[#E9DFFF]/80 bg-[#F7F5FC] p-4 shadow-[0_6px_16px_-2px_rgba(48,42,64,0.05),inset_0_2px_3px_rgba(255,255,255,0.95),inset_0_-2px_3px_rgba(121,87,200,0.04)] transition-all duration-300 hover:border-[#7957C8]/35 hover:shadow-[0_12px_24px_-4px_rgba(121,87,200,0.12)] dark:border-[#2C2442] dark:bg-[#161320] dark:shadow-[0_6px_16px_-2px_rgba(0,0,0,0.35)]"
                     >
                       <div className="flex items-start gap-3">
 
-                        <div className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl ${item.bgColor} ${item.iconColor} shadow-[2px_3px_8px_rgba(48,42,64,0.06),inset_2px_2px_3px_rgba(255,255,255,0.9),inset_-2px_-2px_3px_rgba(121,87,200,0.08)] transition-transform duration-300 group-hover:scale-105`}>
+                        <div className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl ${item.bgColor} ${item.iconColor} shadow-[0_4px_8px_-1px_rgba(48,42,64,0.06),inset_0_2px_3px_rgba(255,255,255,0.9),inset_0_-2px_3px_rgba(0,0,0,0.08)] transition-transform duration-300 group-hover:scale-105 dark:bg-[#2C2442] dark:text-[#C4B5FD]`}>
                           <Icon size={20} />
                         </div>
 

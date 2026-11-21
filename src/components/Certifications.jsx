@@ -60,11 +60,11 @@ function Certifications() {
                 delay: index * 0.1,
               }}
               whileHover={{ y: -6 }}
-              className="clay-card group overflow-hidden rounded-[28px] transition-all duration-300 hover:border-[#7957C8]/40 hover:shadow-[8px_14px_28px_-4px_rgba(121,87,200,0.16)]"
+              className="clay-card group overflow-hidden rounded-[2.5rem] transition-all duration-300 hover:border-[#7957C8]/40 hover:shadow-[0_24px_48px_-6px_rgba(121,87,200,0.16)]"
             >
 
               {/* Certificate Image */}
-              <div className="group relative overflow-hidden border-b border-[#E9DFFF] bg-[#F7F5FC] dark:border-[#2C2442] dark:bg-[#161320]">
+              <div className="group relative overflow-hidden border-b border-[#E9DFFF]/80 bg-[#F7F5FC] dark:border-[#2C2442] dark:bg-[#161320]">
                 <img
                   src={item.image}
                   alt={`${item.title} certificate`}
@@ -81,11 +81,11 @@ function Certifications() {
                 {/* Icon + Issuer */}
                 <div className="flex items-center justify-between">
 
-                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#E9DFFF] text-[#7957C8] shadow-[3px_4px_10px_rgba(48,42,64,0.06),inset_2px_2px_3px_rgba(255,255,255,0.95),inset_-2px_-2px_3px_rgba(121,87,200,0.08)]">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#E9DFFF] text-[#7957C8] shadow-[0_4px_10px_-2px_rgba(121,87,200,0.15),inset_0_2px_3px_rgba(255,255,255,0.95),inset_0_-2px_3px_rgba(121,87,200,0.1)] dark:bg-[#2C2442] dark:text-[#C4B5FD]">
                     <Award size={22} />
                   </div>
 
-                  <span className="rounded-full border border-white/60 bg-[#DCEEFF] px-3.5 py-1 text-xs font-bold text-[#302A40] shadow-[inset_1px_1px_2px_rgba(255,255,255,0.9)]">
+                  <span className="rounded-full border border-[#E9DFFF]/80 bg-[#F7F5FC] px-3.5 py-1 text-xs font-bold text-[#746C82] shadow-[inset_0_1px_2px_rgba(255,255,255,0.9)] dark:border-[#2C2442] dark:bg-[#161320] dark:text-[#A59EBA]">
                     {item.issuer}
                   </span>
                 </div>
@@ -101,7 +101,7 @@ function Certifications() {
                 {/* Footer */}
                 <div className="mt-6 flex items-center justify-between">
 
-                  <div className="flex items-center gap-2 text-sm font-semibold text-[#7957C8]">
+                  <div className="flex items-center gap-2 text-sm font-semibold text-[#7957C8] dark:text-[#C4B5FD]">
                     <BadgeCheck size={17} />
                     Certified
                   </div>
@@ -110,7 +110,7 @@ function Certifications() {
                     href={item.image}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-bold text-[#302A40] transition-colors duration-200 hover:text-[#7957C8] dark:text-[#F4F1FA]"
+                    className="inline-flex items-center gap-2 text-sm font-bold text-[#302A40] transition-colors duration-200 hover:text-[#7957C8] dark:text-[#F4F1FA] dark:hover:text-[#C4B5FD]"
                   >
                     View Certificate
                     <ExternalLink size={15} />

@@ -23,7 +23,7 @@ function Hero() {
 
         <div className="absolute right-0 top-1/3 h-72 w-72 rounded-full bg-[#DCEEFF]/40 blur-3xl dark:bg-[#2C2442]/30" />
 
-        <div className="absolute -left-12 bottom-1/4 h-64 w-64 rounded-full bg-[#FFE5D5]/35 blur-3xl dark:bg-[#7957C8]/5" />
+        <div className="absolute -left-12 bottom-1/4 h-64 w-64 rounded-full bg-[#FFE5D5]/30 blur-3xl dark:bg-[#7957C8]/5" />
       </div>
 
       <div className="relative mx-auto grid min-h-[calc(100vh-8rem)] max-w-7xl items-center gap-16 px-6 py-16 lg:grid-cols-[1.15fr_0.85fr] lg:px-8">
@@ -39,7 +39,7 @@ function Hero() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1, duration: 0.5 }}
-            className="mb-7 inline-flex items-center gap-2 rounded-full border border-[#E9DFFF] bg-white px-4 py-2 text-sm font-semibold text-[#302A40] shadow-[3px_4px_10px_rgba(48,42,64,0.06),inset_2px_2px_3px_rgba(255,255,255,0.95),inset_-2px_-2px_3px_rgba(121,87,200,0.05)]"
+            className="mb-7 inline-flex items-center gap-2 rounded-full border border-[#E9DFFF] bg-white px-4 py-2 text-sm font-semibold text-[#302A40] shadow-[0_4px_12px_-2px_rgba(48,42,64,0.06),inset_0_2px_3px_rgba(255,255,255,0.95),inset_0_-2px_3px_rgba(121,87,200,0.05)] dark:border-[#2C2442] dark:bg-[#1C1829] dark:text-[#F4F1FA] dark:shadow-[0_4px_12px_-2px_rgba(0,0,0,0.4),inset_0_1.5px_2px_rgba(255,255,255,0.08)]"
           >
             <span className="h-2.5 w-2.5 rounded-full bg-[#7957C8] shadow-[0_0_8px_rgba(121,87,200,0.6)]" />
 
@@ -123,7 +123,7 @@ function Hero() {
               target="_blank"
               rel="noreferrer"
               aria-label="GitHub"
-              className="clay-button-secondary flex h-11 w-11 items-center justify-center rounded-2xl text-[#746C82]"
+              className="clay-button-secondary flex h-11 w-11 items-center justify-center rounded-2xl text-[#746C82] dark:text-[#A59EBA]"
             >
               <FaGithub size={20} />
             </a>
@@ -134,7 +134,7 @@ function Hero() {
               target="_blank"
               rel="noreferrer"
               aria-label="LinkedIn"
-              className="clay-button-secondary flex h-11 w-11 items-center justify-center rounded-2xl text-[#746C82]"
+              className="clay-button-secondary flex h-11 w-11 items-center justify-center rounded-2xl text-[#746C82] dark:text-[#A59EBA]"
             >
               <FaLinkedin size={20} />
             </a>
@@ -145,7 +145,7 @@ function Hero() {
               target="_blank"
               rel="noreferrer"
               aria-label="LeetCode"
-              className="clay-button-secondary flex h-11 w-11 items-center justify-center rounded-2xl text-[#746C82]"
+              className="clay-button-secondary flex h-11 w-11 items-center justify-center rounded-2xl text-[#746C82] dark:text-[#A59EBA]"
             >
               <Code2 size={20} />
             </a>
@@ -154,7 +154,7 @@ function Hero() {
             <a
               href="mailto:singamcherry571@gmail.com"
               aria-label="Email"
-              className="clay-button-secondary flex h-11 w-11 items-center justify-center rounded-2xl text-[#746C82]"
+              className="clay-button-secondary flex h-11 w-11 items-center justify-center rounded-2xl text-[#746C82] dark:text-[#A59EBA]"
             >
               <FaEnvelope size={20} />
             </a>
@@ -168,13 +168,13 @@ function Hero() {
           transition={{ duration: 0.8, delay: 0.15 }}
           className="relative mx-auto w-full max-w-md"
         >
-          <div className="clay-card relative aspect-square rounded-[28px] p-6">
+          <div className="relative aspect-square rounded-[2.5rem] border border-[#E9DFFF] bg-white p-6 shadow-[0_20px_44px_-8px_rgba(48,42,64,0.08),inset_0_2px_4px_rgba(255,255,255,0.95),inset_0_-4px_8px_rgba(121,87,200,0.06)] dark:border-[#2C2442] dark:bg-[#1C1829] dark:shadow-[0_20px_44px_-8px_rgba(0,0,0,0.5),inset_0_1.5px_2px_rgba(255,255,255,0.08),inset_0_-4px_8px_rgba(0,0,0,0.4)]">
 
             {/* Profile Placeholder */}
-            <div className="flex h-full items-center justify-center rounded-[22px] border-2 border-dashed border-[#E9DFFF] bg-[#F7F5FC]">
+            <div className="flex h-full items-center justify-center rounded-[2rem] border-2 border-dashed border-[#E9DFFF] bg-[#F7F5FC]/70 dark:border-[#2C2442] dark:bg-[#161320]/70">
               <div className="text-center">
 
-                <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-3xl bg-[#E9DFFF] text-[#7957C8] shadow-[3px_4px_12px_rgba(121,87,200,0.15),inset_2px_2px_3px_rgba(255,255,255,0.95),inset_-2px_-2px_4px_rgba(121,87,200,0.15)]">
+                <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-3xl bg-[#E9DFFF] text-[#7957C8] shadow-[0_6px_14px_-2px_rgba(121,87,200,0.15),inset_0_2px_3px_rgba(255,255,255,0.9),inset_0_-2px_4px_rgba(121,87,200,0.15)] dark:bg-[#2C2442] dark:text-[#C4B5FD] dark:shadow-[inset_0_1.5px_2px_rgba(255,255,255,0.08)]">
                   <Code2
                     size={48}
                     strokeWidth={1.5}
@@ -200,9 +200,9 @@ function Hero() {
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
-              className="clay-card absolute -bottom-5 -left-5 rounded-2xl px-5 py-4"
+              className="absolute -bottom-5 -left-5 rounded-2xl border border-[#E9DFFF] bg-white px-5 py-4 shadow-[0_16px_32px_-4px_rgba(48,42,64,0.12),inset_0_2px_3px_rgba(255,255,255,0.95),inset_0_-2px_4px_rgba(121,87,200,0.08)] dark:border-[#2C2442] dark:bg-[#1C1829] dark:shadow-[0_16px_32px_-4px_rgba(0,0,0,0.6),inset_0_1.5px_2px_rgba(255,255,255,0.08)]"
             >
-              <p className="inline-block rounded-md bg-[#FFE5D5] px-2 py-0.5 text-xs font-bold uppercase tracking-wider text-[#302A40]">
+              <p className="text-xs font-semibold uppercase tracking-wider text-[#746C82] dark:text-[#A59EBA]">
                 Focus
               </p>
 
