@@ -1,26 +1,15 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
-
 :root {
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;
 
-  color: #302A40;
-  background: #F7F5FC;
+  color: #0f172a;
+  background: #f8f7f4;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  --clay-bg: #F7F5FC;
-  --clay-lavender: #E9DFFF;
-  --clay-pastel-blue: #DCEEFF;
-  --clay-mint: #DDF5E8;
-  --clay-peach: #FFE5D5;
-  --clay-text-primary: #302A40;
-  --clay-text-secondary: #746C82;
-  --clay-accent: #7957C8;
-  --clay-accent-hover: #6744B5;
 }
 
 html {
@@ -31,8 +20,7 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background: #F7F5FC;
-  color: #302A40;
+  background: #f8f7f4;
 }
 
 button,
@@ -41,129 +29,6 @@ a {
 }
 
 ::selection {
-  background: #E9DFFF;
-  color: #7957C8;
-}
-
-/* Claymorphism Surfaces & Tactile Shadows */
-.clay-card {
-  background: #ffffff;
-  border: 1px solid rgba(233, 223, 255, 0.7);
-  box-shadow:
-    0 16px 36px -6px rgba(48, 42, 64, 0.07),
-    0 4px 12px -2px rgba(121, 87, 200, 0.05),
-    inset 0 2px 4px 0 rgba(255, 255, 255, 0.95),
-    inset 0 -3px 6px 0 rgba(121, 87, 200, 0.06);
-}
-
-.dark .clay-card {
-  background: #1C1829;
-  border: 1px solid rgba(44, 36, 66, 0.9);
-  box-shadow:
-    0 16px 36px -6px rgba(0, 0, 0, 0.45),
-    0 4px 12px -2px rgba(0, 0, 0, 0.3),
-    inset 0 1.5px 2px 0 rgba(255, 255, 255, 0.08),
-    inset 0 -3px 6px 0 rgba(0, 0, 0, 0.45);
-}
-
-.clay-button-primary {
-  background: #7957C8;
+  background: #0057ff;
   color: #ffffff;
-  box-shadow:
-    0 8px 20px -2px rgba(121, 87, 200, 0.38),
-    0 4px 8px -2px rgba(121, 87, 200, 0.2),
-    inset 0 2px 3px 0 rgba(255, 255, 255, 0.38),
-    inset 0 -3px 5px 0 rgba(48, 42, 64, 0.25);
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.clay-button-primary:hover {
-  background: #6D48BF;
-  box-shadow:
-    0 12px 24px -2px rgba(121, 87, 200, 0.48),
-    0 6px 12px -2px rgba(121, 87, 200, 0.25),
-    inset 0 2px 3px 0 rgba(255, 255, 255, 0.45),
-    inset 0 -3px 5px 0 rgba(48, 42, 64, 0.25);
-  transform: translateY(-2px);
-}
-
-.clay-button-primary:active {
-  transform: translateY(1px);
-  box-shadow:
-    0 4px 10px -2px rgba(121, 87, 200, 0.3),
-    inset 0 2px 4px 0 rgba(48, 42, 64, 0.35);
-}
-
-.clay-button-secondary {
-  background: #ffffff;
-  color: #302A40;
-  border: 1px solid rgba(233, 223, 255, 0.85);
-  box-shadow:
-    0 6px 16px -2px rgba(48, 42, 64, 0.06),
-    0 2px 6px -1px rgba(121, 87, 200, 0.05),
-    inset 0 2px 3px 0 rgba(255, 255, 255, 0.95),
-    inset 0 -2px 4px 0 rgba(121, 87, 200, 0.06);
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.clay-button-secondary:hover {
-  color: #7957C8;
-  border-color: rgba(121, 87, 200, 0.4);
-  box-shadow:
-    0 10px 20px -2px rgba(121, 87, 200, 0.14),
-    inset 0 2px 3px 0 rgba(255, 255, 255, 1),
-    inset 0 -2px 4px 0 rgba(121, 87, 200, 0.08);
-  transform: translateY(-2px);
-}
-
-.dark .clay-button-secondary {
-  background: #1C1829;
-  color: #F4F1FA;
-  border-color: rgba(44, 36, 66, 0.9);
-  box-shadow:
-    0 6px 16px -2px rgba(0, 0, 0, 0.35),
-    inset 0 1.5px 2px 0 rgba(255, 255, 255, 0.08),
-    inset 0 -2px 4px 0 rgba(0, 0, 0, 0.4);
-}
-
-.dark .clay-button-secondary:hover {
-  color: #C4B5FD;
-  border-color: rgba(121, 87, 200, 0.5);
-}
-
-.clay-input {
-  background: #F7F5FC;
-  border: 1px solid rgba(233, 223, 255, 0.9);
-  color: #302A40;
-  box-shadow:
-    inset 0 2px 4px 0 rgba(48, 42, 64, 0.05),
-    inset 0 -1px 2px 0 rgba(255, 255, 255, 0.8),
-    0 1px 2px 0 rgba(0, 0, 0, 0.02);
-  transition: all 0.2s ease;
-}
-
-.clay-input:focus {
-  background: #ffffff;
-  border-color: #7957C8;
-  outline: none;
-  box-shadow:
-    inset 0 2px 4px 0 rgba(121, 87, 200, 0.08),
-    0 0 0 3px rgba(121, 87, 200, 0.18);
-}
-
-.dark .clay-input {
-  background: #161320;
-  border-color: rgba(44, 36, 66, 0.9);
-  color: #F4F1FA;
-  box-shadow:
-    inset 0 2px 4px 0 rgba(0, 0, 0, 0.5),
-    inset 0 -1px 2px 0 rgba(255, 255, 255, 0.04);
-}
-
-.dark .clay-input:focus {
-  background: #161320;
-  border-color: #7957C8;
-  box-shadow:
-    inset 0 2px 4px 0 rgba(0, 0, 0, 0.5),
-    0 0 0 3px rgba(121, 87, 200, 0.25);
 }

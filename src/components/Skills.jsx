@@ -65,7 +65,7 @@ function Skills() {
   return (
     <section
       id="skills"
-      className="relative bg-[#F7F5FC] py-24 transition-colors duration-300 dark:bg-[#13101C]"
+      className="bg-[#F8F7F4] py-24 dark:bg-[#050816]"
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
@@ -77,16 +77,16 @@ function Skills() {
           transition={{ duration: 0.6 }}
           className="max-w-3xl"
         >
-          <p className="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-[#7957C8]">
+          <p className="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-[#0057FF]">
             Skills
           </p>
 
-          <h2 className="text-4xl font-black tracking-tight text-[#302A40] dark:text-white sm:text-5xl">
+          <h2 className="text-4xl font-black tracking-tight text-slate-950 dark:text-white sm:text-5xl">
             Technologies I{" "}
-            <span className="text-[#7957C8]">work with.</span>
+            <span className="text-[#0057FF]">work with.</span>
           </h2>
 
-          <p className="mt-6 text-lg leading-8 text-[#746C82] dark:text-[#A59EBA]">
+          <p className="mt-6 text-lg leading-8 text-slate-600 dark:text-slate-400">
             A growing set of technical skills covering programming,
             full-stack development, AI/ML, databases, tools, and core
             computer science concepts.
@@ -94,7 +94,7 @@ function Skills() {
         </motion.div>
 
         {/* Skills Grid */}
-        <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {skillCategories.map((category, index) => {
             const Icon = category.icon;
 
@@ -109,15 +109,15 @@ function Skills() {
                   delay: index * 0.07,
                 }}
                 whileHover={{ y: -5 }}
-                className="clay-card group rounded-[2.25rem] p-7 transition-all duration-300 hover:border-[#7957C8]/40 hover:shadow-[0_22px_44px_-6px_rgba(121,87,200,0.15)]"
+                className="group rounded-2xl border border-slate-200 bg-white p-6 transition-all duration-300 hover:border-blue-200 hover:shadow-lg dark:border-slate-800 dark:bg-[#0B1220] dark:hover:border-blue-900"
               >
                 {/* Category Header */}
                 <div className="flex items-center gap-4">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#E9DFFF] text-[#7957C8] shadow-[0_4px_10px_-2px_rgba(121,87,200,0.15),inset_0_2px_3px_rgba(255,255,255,0.95),inset_0_-2px_3px_rgba(121,87,200,0.12)] transition-transform duration-300 group-hover:scale-105 dark:bg-[#2C2442] dark:text-[#C4B5FD]">
-                    <Icon size={22} strokeWidth={1.8} />
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-[#0057FF] transition-transform duration-300 group-hover:scale-105 dark:bg-blue-950/40">
+                    <Icon size={21} strokeWidth={1.8} />
                   </div>
 
-                  <h3 className="text-lg font-bold text-[#302A40] dark:text-white">
+                  <h3 className="font-bold text-slate-900 dark:text-white">
                     {category.title}
                   </h3>
                 </div>
@@ -127,7 +127,7 @@ function Skills() {
                   {category.skills.map((skill) => (
                     <span
                       key={skill}
-                      className="rounded-xl border border-[#E9DFFF]/80 bg-[#F7F5FC] px-3.5 py-1.5 text-sm font-medium text-[#302A40] shadow-[0_2px_6px_rgba(48,42,64,0.03),inset_0_1.5px_2px_rgba(255,255,255,0.95),inset_0_-1.5px_2px_rgba(121,87,200,0.04)] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#7957C8]/40 hover:bg-[#E9DFFF]/40 hover:text-[#7957C8] dark:border-[#2C2442] dark:bg-[#161320] dark:text-[#F4F1FA] dark:hover:text-[#C4B5FD]"
+                      className="rounded-lg border border-slate-200 bg-slate-50 px-3 py-1.5 text-sm font-medium text-slate-700 transition-all duration-200 hover:border-[#0057FF] hover:bg-blue-50 hover:text-[#0057FF] dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300 dark:hover:border-[#0057FF] dark:hover:bg-blue-950/30 dark:hover:text-[#3380FF]"
                     >
                       {skill}
                     </span>
